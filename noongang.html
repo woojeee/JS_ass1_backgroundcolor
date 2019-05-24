@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="noongang.css" />
+    <title>마블리의 눈갱</title>
+  </head>
+  <body>
+    <img src="mably.gif" />
+    <h1>♥마요미 뿌잉뿌잉♥</h1>
+
+    <script>
+      let body = document.querySelector("body");
+      let h1 = document.querySelector("h1");
+      function getRandNum() {
+        let randomNum = Math.floor(Math.random() * 255);
+
+        return randomNum;
+      }
+
+      let r = 0;
+      let g = 0;
+      let b = 0;
+
+      setInterval(function() {
+        r = getRandNum();
+        g = getRandNum();
+        b = getRandNum();
+        body.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+        r = getRandNum();
+        g = getRandNum();
+        b = getRandNum();
+        h1.style.color = "rgb(" + r + "," + g + "," + b + ")";
+      }, 100);
+    </script>
+  </body>
+</html>
